@@ -1,20 +1,21 @@
-i#!/bin/sh
+#!/bin/sh
 echo "Let's calculate GCD of two values. Input the value."
 read ans
 a=$ans
-echo "Your first value is: $a"
+echo "Your first value is: $a "
 echo "Then, please type the second value."
 read ans
 b=$ans
-echo "Your second value is: $b"
-
-while [ r > 1 ]
+echo "Your second value is: $b "
+:
+while [ $r -ne 1 ]
 do
-     r=$(( $a % $b )) ; a=$b && b=$r
-     if [ $b -gt $a ] ; then a=$b && b=$a
+     if [ $b -ge $a ] | b="$a" && a="$b" ; then
+r=$(( $a % $b )) ; a="$b" && b="$r" ;
 fi
 done
-    if [ $r == 0 ] ; then  echo "The GCM is: $a"
-    else echo "Sorry, no GCM found"
+:
+    if [ $r -eq 0 ] | echo "The GCM is: $a"
+    then echo "Sorry, no GCM found"
 fi
  
